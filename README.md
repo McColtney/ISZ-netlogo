@@ -18,12 +18,34 @@
 
 **NetLogo** jest kolejną generacją w serii wieloagentowych języków modelowania, takich jak [StarLogo](http://education.mit.edu/portfolio_page/starlogo-tng/) i StarLogoT. NetLogo działa na maszynie wirtualnej Javy, dlatego obsługuje wszystkie ważne systemy operacyjne. Jest uruchamiane jako aplikacja desktopowa; wspierane jest również używanie go z linii komend.
 
-## Otwieranie i korzystanie z modułów
+## Modele
 
-Model Tumor
+### Otwieranie i korzystanie z modeli
 
-Wybierz File->Models Library, a następnie Sample Models/Biology/Tumor
+Gotowe modele dostarczone z programem można otworzyć przez `File > Models Library`.
 
+W oknie NetLogo można wymienić następujące istotne obszary, podzielone na 3 zakładki, `Inteface | Info | Code`:
+- `Interface` pokazuje kontrolki służące do manipulacji i wyświetlania wyników symulacji.
+- `Info` zawiera istotne informacje dostarczone przez autora modułu, m.in. propozycje manipulowania modelem, jego tło naukowe albo sugestie rozbudowy czy zmian.
+- `Code` zawiera definicje zmiennych (część zmiennych zdefiniowana jest przez samo umieszczenie i nazwanie kontrolki w karcie `Interface`) oraz procedur, napisane w języku NetLogo.
+
+Gdy zostanie wczytany jakiś moduł, w karcie `Interface` mogą ukazać się różne kontrolki:
+- **Przyciski** służące do uruchomiania procedur, w szczególności `setup` i `go`
+- **Suwaki** pozwalające manipulować parametrami modelu
+- **Wykresy** oraz **monitory** wyświetlające aktualne i historyczne dane
+
+Zazwyczaj sposobem na rozpoczęcie symulacji jest zainicjowanie lub zresetowanie stanu środowiska przyciskiem `setup`, a następnie uruchomienie go przyciskiem `go`. Proszę zwrócić uwagę na symbol cyklicznych strzałek, który może pojawić się na przycisku `go`, sugerujący że symulacja będzie trwała dopóki nie osiągnie warunków końcowych, bądź zostanie przerwana ponownym wciśnięciem `go`. Przyciski `go` lub `go once` bez symbolu cyklu uruchomią tylko jedno przejście, _tick_ symulacji.
+
+Zmiana parametrów przy pomocy suwaków może wymagać ponownego wykonania `setup`, aby symulacja przebiegła poprawnie.
+
+Prędkością wykonywania symulacji można manipulować suwakiem znajdującym się w górnej części karty `Interface`. Zmieniając karty warto pamiętać, że symulacja nie jest zawieszana podczas pobytu na karcie innej niż `Interface`.
+  
+### Przykładowe modele
+
+#### Tumor
+
+Model znajduje się bibliotece pod `Sample Models/Biology/Tumor`.
+```
 SETUP: Czyści obraz. Tworzy dwie niebieskie rakowe komórki macierzyste. Jedna pozostaje statyczna. Druga będzie poruszać się w prawo.
 
 GO: Uruchamia symulacje.
@@ -39,7 +61,7 @@ LEAVE-TRAIL: Śledzenie drogi komórki.
 CELL-COUNT: Wyświetla całkowitą liczbę żywych komórek.
 
 LIVING CELLS PLOT: wykres wszystkich żywych komórek
-
+```
 1)
 Kliknij na KILL TRANSISTORY CELLS kiedy model jest uruchomiony. Jest to symulacja chemicznego leczenia. Środek eliminuje młode (czerwone) komórki które się dzielą, ale za to pozostawia stare komórki. Zauważ, że guz kurczy się i wzrasta ponownie. Kliknij kilka razy ponownie. Większość znanych leków stosowanych w chemioterapii hamuje podział nowych komórek lecz nie powoduje śmierci tych starszych. Tak więc pozostają one nienaruszone. Problem polega na tym, że komórki macierzyste utrzymują guza, a to powoduje przerzuty. Komórki macierzyste są na ogół odporne na chemioterapie. Można je usunąć jedynie dużymi dawkami substancji chemicznych, które 
 zagrażają zdrowym komórkom macierzystym. 
@@ -90,7 +112,5 @@ Jaki jest najlepszy sposób aby uniknąć przetrenowania organizmu?
 1. Zmień jego właściwość _Commands_ na `setup`. Przycisk będzie wywoływał procedurę o takim identyfikatorze.
 1. Otwórz zakładkę z kodem. Wprowadź szkielet funkcji `setup` wg wzoru:
 ```NetLogo
-to setup
-;;; komentarz
-end
+
 ```
