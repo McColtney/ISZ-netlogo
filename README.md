@@ -20,6 +20,64 @@
 
 ## Otwieranie i korzystanie z modułów
 
+Model Tumor
+
+Wybierz File->Models Library, a następnie Sample Models/Biology/Tumor
+
+SETUP: Czyści obraz. Tworzy dwie niebieskie rakowe komórki macierzyste. Jedna pozostaje statyczna. Druga będzie poruszać się w prawo.
+
+GO: Uruchamia symulacje.
+
+KILL TRANSITORY CELLS: Zabija komórki przejściowe, które są młodsze niż 10 kroków czasowych.
+
+KILL STEM CELL: Zabija komórkę macierzystą statyczną. 
+
+KILL MOVING CELL: Zabija komórkę macierzystą przesuniętą w prawo.
+
+LEAVE-TRAIL: Śledzenie drogi komórki.
+
+CELL-COUNT: Wyświetla całkowitą liczbę żywych komórek.
+
+LIVING CELLS PLOT: wykres wszystkich żywych komórek
+
+1)
+Kliknij na KILL TRANSISTORY CELLS kiedy model jest uruchomiony. Jest to symulacja chemicznego leczenia. Środek eliminuje młode (czerwone) komórki które się dzielą, ale za to pozostawia stare komórki. Zauważ, że guz kurczy się i wzrasta ponownie. Kliknij kilka razy ponownie. Większość znanych leków stosowanych w chemioterapii hamuje podział nowych komórek lecz nie powoduje śmierci tych starszych. Tak więc pozostają one nienaruszone. Problem polega na tym, że komórki macierzyste utrzymują guza, a to powoduje przerzuty. Komórki macierzyste są na ogół odporne na chemioterapie. Można je usunąć jedynie dużymi dawkami substancji chemicznych, które 
+zagrażają zdrowym komórkom macierzystym. 
+
+2)
+Kiedy nowotwór znów urośnie kliknij na KILL MOVING STEM CELL.Prawa komórka macierzysta znikneła. Jej potomkowie żyją nieco dłużej,
+a potem umierają.
+
+3)
+Kliknij na KILL ORIGINAL STEM CELL i obserwuj stopniowy zanik guza. Żadne nowe komórki nie są tworzone. Starsze starzeją się aż do śmierci i zanikają. 
+
+Model Muscle Development
+
+Wybierz File->Models Library, a następnie Sample Models/Biology/Muscle Development
+
+SETUP: Ustawia model.
+
+GO: Uruchamia model.
+
+INTENSITY: Im większa siła, tym większa ilość włókien mięśniowych, które będą zmęczone po sesji treningowej.
+
+HOURS-OF-SLEEP: Ilość snu wpływa na to jak szybko organizm rozbija hormony.
+
+DAYS-BETWEEN-WORKOUTS: Ilość dni pomiędzy treningami.
+
+%-SLOW-TWITCH-FIBERS: Prawdopodobieństwo posiadania cech wolnych skurczy.
+
+MUSCLE DEVELOPMENT VS. TIME: Rozmiar masy mięśniowej wraz z upływem czasu.
+
+HORMONES VS. TIME: Średnia zawartość hormonów w każdym z włókien.
+
+1)
+Uruchom model z ustawieniami domyślnymi. Co się dzieje z ilością masy mięśniowej?
+
+2)
+Przetrenowanie występuje wtedy gdy organizm nie jest w stanie całkowicie się odbudować po ostatnim treningu. To powoduje stagnację rozwoju mięśni, a w skrajnych wypadkach ich utratę. 
+Jaki jest najlepszy sposób aby uniknąć przetrenowania organizmu?
+
 ## Programowanie modułów
 
 ### Materiały
