@@ -77,6 +77,54 @@ Model znajduje się w bibliotece pod `Sample Models/Biology/Muscle Development`.
 1. Uruchom model z ustawieniami domyślnymi. Co się dzieje z ilością masy mięśniowej?
 2. Przetrenowanie występuje wtedy gdy organizm nie jest w stanie całkowicie się odbudować po ostatnim treningu. To powoduje stagnację rozwoju mięśni, a w skrajnych wypadkach ich utratę. Jaki jest najlepszy sposób aby uniknąć przetrenowania organizmu?
 
+### Wybrane interesujące modele
+- Sample Models
+  - Art
+    - Diffusion Graphics
+	- Sound Machines
+  - Biology
+    - Ants
+	- Autumn
+	- Evolution
+	  - Cooperation
+	  - Sunflower Biomorphs
+	- Flocking
+	- Fur
+	- Honeycomb
+	- Wolf Sheep Predation
+  - Chemistry & Physics
+    - Crystallization
+	  - Crystallization Moving
+	- Waves
+	  - Wave Machine
+  - Computer Science
+    - Cellular Automata
+	  - Life
+	- Dining Philosophers
+	- Particle Systems
+	  - Particle System Flame
+	- Vants
+	- Wandering Letters
+  - Earth Science
+    - Grand Canyon
+  - Mathematics
+    - Fractals
+	  - Mandelbrot
+	  - Sierpinski Simple
+	- Probability
+	  - Galton Box
+	- Vector Fields
+  - Social Science
+    - Segregation
+	- Traffic Bacis
+	- Traffic Grid
+	- Wealth Distribution
+- Curricular Models
+  - BEAGLE Evolution
+    - DNA Replication Fork
+  - NIELS
+    - Current in a Wire
+	
 ## Programowanie modułów
 
 ### Materiały
@@ -89,7 +137,7 @@ Przepływ sterowania w NetLogo dokonuje się poprzez wywoływanie procedur. Pier
 
 Warto zauważyć, że część zmiennych tworzona jest nie w sekcji `Code`, ale `Interface`, gdyż samo utworzenie kontrolki suwaka równoważne jest z deklaracją zmiennej globalnej.
 
-Ponadto zmienne mogą żyć tylko w określonych przestrzeniach: globalnej, jako cechy żółwi lub jako cechy siatki. Procedury nie posiadają zmiennych lokalnych ani nie mogą zwracać, czy przyjmować wartości.
+Ponadto zmienne mogą żyć tylko w określonych przestrzeniach, m.in.: globalnej, jako cechy żółwi lub jako cechy pól siatki. Procedury nie posiadają zmiennych lokalnych ani nie mogą zwracać, czy przyjmować wartości.
 
 Definicja procedury:
 
@@ -103,8 +151,8 @@ Definicja dodatkowych zmiennych globalnych, cech żółwi oraz cech pól siatki:
 
 ```
 globals ;;; słowo kluczowe
-  [ lifespan             ;; deklaracje zmiennych
-    chance-reproduce ]   ;; deklaracje zmiennych
+  [ lifespan             ;;; deklaracje zmiennych
+    chance-reproduce ]   ;;; deklaracje zmiennych
 	
 turtles-own
   [ something ]
