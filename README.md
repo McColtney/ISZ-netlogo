@@ -83,11 +83,12 @@ Model znajduje się w bibliotece pod `Sample Models/Biology/Muscle Development`.
 
 - [Dokumentacja NetLogo](https://ccl.northwestern.edu/netlogo/docs/)
 
-### Tworzenie własnego modułu od zera
+### Podstawy składni NetLogo
 
-1. Po otwarciu nowego pustego modelu w NetLogo, utwórz w widoku interfejsu nowy przycisk.
-1. Zmień jego właściwość _Commands_ na `setup`. Przycisk będzie wywoływał procedurę o takim identyfikatorze.
-1. Otwórz zakładkę z kodem. Wprowadź szkielet funkcji `setup` wg wzoru:
+Definicja procedury
+
 ```NetLogo
-
+to do-something
+  ;;; comment
+end
 ```
