@@ -36,7 +36,7 @@ Gdy zostanie wczytany jakiś moduł, w karcie `Interface` mogą ukazać się ró
 
 Zazwyczaj sposobem na rozpoczęcie symulacji jest zainicjowanie lub zresetowanie stanu środowiska przyciskiem `setup`, a następnie uruchomienie go przyciskiem `go`. Proszę zwrócić uwagę na symbol cyklicznych strzałek, który może pojawić się na przycisku `go`, sugerujący że symulacja będzie trwała dopóki nie osiągnie warunków końcowych, bądź zostanie przerwana ponownym wciśnięciem `go`. Przyciski `go` lub `go once` bez symbolu cyklu uruchomią tylko jedno przejście, _tick_ symulacji.
 
-Zmiana parametrów przy pomocy suwaków może wymagać ponownego wykonania `setup`, aby symulacja przebiegła poprawnie.
+Zmiana parametrów układu przy pomocy suwaków może wymagać ponownego wykonania `setup`, aby symulacja przebiegła poprawnie.
 
 Prędkością wykonywania symulacji można manipulować suwakiem znajdującym się w górnej części karty `Interface`. Zmieniając karty warto pamiętać, że symulacja nie jest zawieszana podczas pobytu na karcie innej niż `Interface`.
   
@@ -85,10 +85,30 @@ Model znajduje się w bibliotece pod `Sample Models/Biology/Muscle Development`.
 
 ### Podstawy składni NetLogo
 
-Definicja procedury
+Przepływ sterowania w NetLogo dokonuje się poprzez wywoływanie procedur. Pierwsze poruszenie dokonuje się poprzez kontrolkę interfejsu `setup`. Wywołuje ona procedurę o zazwyczaj tej samej nazwie, której zadaniem jest wprowadzenie układu w stan początkowy.
 
-```NetLogo
+Warto zauważyć, że część zmiennych tworzona jest nie w sekcji `Code`, ale `Interface`, gdyż samo utworzenie kontrolki suwaka równoważne jest z deklaracją zmiennej globalnej.
+
+Ponadto zmienne mogą żyć tylko w określonych przestrzeniach: globalnej, jako cechy żółwi lub jako cechy siatki. Procedury nie posiadają zmiennych lokalnych ani nie mogą zwracać, czy przyjmować wartości.
+
+Definicja procedury:
+
+```
 to do-something
   ;;; comment
 end
+```
+
+Definicja dodatkowych zmiennych globalnych, cech żółwi oraz cech pól siatki:
+
+```
+globals ;;; słowo kluczowe
+  [ lifespan             ;; deklaracje zmiennych
+    chance-reproduce ]   ;; deklaracje zmiennych
+	
+turtles-own
+  [ something ]
+  
+patches-own
+  [ something ]
 ```
