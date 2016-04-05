@@ -1,5 +1,11 @@
 # Tutorial NetLogo
 
+## Skocz do:
+
+- [Wybrane interesujące modele](#wybrane-interesuj%C4%85ce-modele)
+- [Programowanie modułów](#programowanie-modu%C5%82%C3%B3w)
+
+
 ## Instalacja programu
 
 - [download NetLogo 5.3.1 (Mac/Win/Linux)](https://ccl.northwestern.edu/netlogo/5.3.1/)
@@ -125,7 +131,7 @@ Model znajduje się w bibliotece pod `Sample Models/Biology/Muscle Development`.
   - NIELS
     - Current in a Wire
 	
-## Programowanie modułów
+## Programowanie modeli
 
 ### Materiały
 
