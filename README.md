@@ -1,5 +1,11 @@
 # Tutorial NetLogo
 
+## Spis treści
+- [Instalacja programu](#)
+- [Czym jest NetLogo?](#)
+- [Modele](#)
+- [Programowanie modułów](#)
+
 ## Instalacja programu
 
 - [download NetLogo 5.3.1 (Mac/Win/Linux)](https://ccl.northwestern.edu/netlogo/5.3.1/)
