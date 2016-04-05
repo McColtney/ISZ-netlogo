@@ -3,7 +3,7 @@
 ## Skocz do:
 
 - [Wybrane interesujące modele](#wybrane-interesuj%C4%85ce-modele)
-- [Programowanie modułów](#programowanie-modu%C5%82%C3%B3w)
+- [Programowanie modeli](#programowanie-modeli)
 
 
 ## Instalacja programu
