@@ -197,4 +197,22 @@ ifelse boolean?
 
 ask turtles [ die ] 
 ..............hatch 1 [ ... ]
+
+globals [ ... ]
+breed [ plural singular ]
+patches-own [ ... ]
+one-of [ ...agentset... ]
+set-default-shape <breeds> "identyfikator-kształtu"
+create-<breeds>
+any? agentset
+rt
+lt
+fd
+
+; !!!
+let prey one-of sheep-here
+; innymi słowy
+let <local_var> one-of <breeds>-here
+
+if prey != nobody
 ```
