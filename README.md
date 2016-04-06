@@ -139,11 +139,11 @@ Model znajduje się w bibliotece pod `Sample Models/Biology/Muscle Development`.
 
 ### Podstawy składni NetLogo
 
-Przepływ sterowania w NetLogo dokonuje się poprzez wywoływanie procedur. Pierwsze poruszenie dokonuje się poprzez kontrolkę interfejsu `setup`. Wywołuje ona procedurę o zazwyczaj tej samej nazwie, której zadaniem jest wprowadzenie układu w stan początkowy.
+Przepływ sterowania w NetLogo dokonuje się poprzez wywoływanie procedur i reporterów. Pierwsze poruszenie dokonuje się poprzez kontrolkę interfejsu `setup`. Wywołuje ona procedurę o zazwyczaj tej samej nazwie, której zadaniem jest wprowadzenie układu w stan początkowy.
 
 Warto zauważyć, że część zmiennych tworzona jest nie w sekcji `Code`, ale `Interface`, gdyż samo utworzenie kontrolki suwaka równoważne jest z deklaracją zmiennej globalnej.
 
-Ponadto zmienne mogą żyć tylko w określonych przestrzeniach, m.in.: globalnej, jako cechy żółwi lub jako cechy pól siatki. Procedury nie posiadają zmiennych lokalnych ani nie mogą zwracać, czy przyjmować wartości.
+Ponadto zmienne mogą żyć tylko w określonych przestrzeniach, m.in.: globalnej, jako cechy żółwi lub jako cechy pól siatki.
 
 Definicja procedury:
 
@@ -153,16 +153,48 @@ to do-something
 end
 ```
 
-Definicja dodatkowych zmiennych globalnych, cech żółwi oraz cech pól siatki:
+### Fragmenty kodu wykorzystywane w lekcji
 
 ```
-globals ;;; słowo kluczowe
-  [ lifespan             ;;; deklaracje zmiennych
-    chance-reproduce ]   ;;; deklaracje zmiennych
-	
-turtles-own
-  [ something ]
-  
-patches-own
-  [ something ]
+ask patches [ ... ]
+....turtles
+
+set color
+....pcolor
+
+inspect turtle
+........patch
+		
+to setup
+  clear-all
+  create-turtles 100 [ setxy random-xcor random-ycor ]
+  reset-ticks
+end
+
+to go
+  ...
+  tick
+end
+
+to move-turtles
+  ask turtles [
+    right random 360
+    forward 1
+  ]
+end
+
+set var var + 10
+
+turtles-own [
+  ...
+]
+
+if x = y [ ... ]
+ifelse boolean?
+  [ ...if true... ]
+  [ ...if false... ]
+
+
+ask turtles [ die ] 
+..............hatch 1 [ ... ]
 ```
